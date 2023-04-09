@@ -2,11 +2,7 @@ from flask import Flask, render_template
 import chrome_bookmarks
 import random
 
-### this is a Random Bookmark Generator, using flash, it can access your
-## bookmarks and display a random link 
-
-# to activate:  source websitetest/myproject/bin/activate
-# must be above websitetest folder
+# . venv/bin/activate
 
 bookmarks_url = []
 
