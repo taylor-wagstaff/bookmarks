@@ -1,0 +1,140 @@
+/* General Website Style rules */
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(252, 252, 252);
+}
+
+/*   --main-bg-color: rgb(254, 221, 227) rgb(236, 236, 249); */
+
+:root {
+  --main-bg-color: rgb(239, 239, 254);
+  --main-text-color: #fff;
+}
+
+.header {
+  /* background-color:gainsboro */
+  background-color: var(--main-bg-color); 
+  border-top-left-radius: 2rem;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: blue;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* to generate random links css */
+
+.generator{
+  text-align: center;
+  align-items: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  
+}
+
+
+
+#run-button {
+  background-color: var(--main-bg-color); 
+  border-top-left-radius: 2rem;
+  border-style: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: blue;
+  max-width: 8rem;
+  min-height: 3rem;
+}
+
+#run-button:hover {
+  background-color: var(--main-bg-color);
+  border-style: none;
+  color: white;
+  cursor: help;
+
+}
+
+
+.link_list{
+  background-color: rgb(252, 252, 252);
+  /* border-top: 5px solid rgb(254, 221, 227);  */
+  /* border-style: dotted; */
+  /* padding: 1rem, 1rem, 1rem, 0rem; */
+  text-align: left;
+  overflow:hidden;
+}
+
+/* search bar */
+
+.input {
+  border: none;
+  min-width: 500px;
+
+}
+
+.clear-results {
+  color: blue;
+  border: none;
+  background-color: white;
+  
+}
+
+.clear-results:hover{
+  cursor:pointer;
+  background-color: var(--main-bg-color);
+
+}
+
+.form-container {
+  background-color: var(--main-bg-color);
+
+}
+
+#search{
+  background-color: white;
+  border: 1px solid blue;
+}
+
+.results-container {
+  background-color: var(--main-bg-color); 
+  overflow: hidden;
+
+}
+
+li {
+  list-style: none;
+}
+
+
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color:springgreen;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
