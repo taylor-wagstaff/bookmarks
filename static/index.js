@@ -1,37 +1,3 @@
-// let url_list = []
-
-// const button = document.getElementById('run-button')
-// button.addEventListener('click', () => {
-//   fetch('/run_code', { method: 'POST' })
-//     .then((response) => response.text())
-//     .then((text) => {
-//       // Remove spaces between letters
-//       const formattedText = text.replace(/\s/g, '')
-//       document.getElementById('link').innerHTML = formattedText
-//       document.getElementById('link').href = formattedText
-//     })
-//     .catch((error) => console.error(error))
-// })
-
-// function fetchText() {
-//   const fetchResponse = fetch('/run_all', { method: 'POST' })
-//     .then((response) => response.text())
-//     .then((text) => {
-//       const href_links = document.getElementById('link_all')
-//       const lines = text.split('\n')
-//       url_list.push(lines)
-//       for (let i = 0; i < lines.length; i++) {
-//         const line = lines[i].trim()
-//         const link = document.createElement('a')
-//         link.href = line
-//         link.innerText = line
-//         href_links.appendChild(link)
-//         href_links.appendChild(document.createElement('br'))
-//       }
-//     })
-//     .catch((error) => console.error(error))
-// }
-
 // https://flexiple.com/javascript/javascript-clock/
 // how to make a javascript clock.
 function currentTime() {
@@ -59,78 +25,41 @@ function currentTime() {
 
 currentTime()
 
-// // Search bookmarks..
-// // How To: Build A Simple Search Bar in JavaScript by Adriana DiPietro
-// // https://dev.to/am20dipi/how-to-build-a-simple-search-bar-in-javascript-4onf
+// move away mouse img
+// Chat-gpt
+var img = document.getElementById('my-image')
+var bodyRect = document.body.getBoundingClientRect()
+var elemRect = img.getBoundingClientRect()
+var offsetX = elemRect.left - bodyRect.left
+var offsetY = elemRect.top - bodyRect.top
 
-// // I havent actually seen this done in vinilla js, only react.
+// Set the initial position of the image to the center of the window
+var centerX = window.innerWidth / 2 - img.offsetWidth / 2
+var centerY = window.innerHeight / 2 - img.offsetHeight / 2
+img.style.left = centerX + 'px'
+img.style.top = centerY + 'px'
 
-// const searchInput = document.querySelector('.input')
-// searchInput.addEventListener('input', (e) => {
-//   let value = e.target.value
+document.addEventListener('mousemove', function (event) {
+  var mouseX = event.clientX - offsetX
+  var mouseY = event.clientY - offsetY
+  var distX = mouseX - (img.offsetLeft + img.offsetWidth / 2)
+  var distY = mouseY - (img.offsetTop + img.offsetHeight / 2)
+  var dist = Math.sqrt(distX * distX + distY * distY)
+  var maxDist = 100 // adjust this value to change the maximum distance
 
-//   if (value && value.trim().length > 0) {
-//     value = value.trim().toLowerCase()
+  if (dist < maxDist) {
+    var newX = img.offsetLeft - (distX / dist) * (maxDist - dist)
+    var newY = img.offsetTop - (distY / dist) * (maxDist - dist)
 
-//     fetch('/run_all', { method: 'POST' })
-//       .then((response) => response.text())
-//       .then((text) => {
-//         // here I used ai, got really confused, realised it was a string,
-//         // so needed to split to turn into an array, then i could filter
-//         const urls = text.split('\n').map((url) => url.trim())
-//         const filteredUrls = urls.filter((url) => {
-//           return url.includes(value)
-//         })
-//         setList(filteredUrls)
-//       })
-//   } else {
-//     clearList()
-//   }
-// })
+    // Make sure the image stays within the boundaries of the window
+    newX = Math.max(0, Math.min(newX, window.innerWidth - img.offsetWidth))
+    newY = Math.max(0, Math.min(newY, window.innerHeight - img.offsetHeight))
 
-// const clearButton = document.getElementById('clear')
+    img.style.left = newX + 'px'
+    img.style.top = newY + 'px'
+  }
+})
 
-// clearButton.addEventListener('click', () => {
-//   clearList()
-// })
-
-// function clearList() {
-//   // looping through each child of the search results list and remove each child
-//   while (list.firstChild) {
-//     list.removeChild(list.firstChild)
-//   }
-// }
-
-// function noResults() {
-//   // create an element for the error; a list item ("li")
-//   const error = document.createElement('li')
-//   // adding a class name of "error-message" to our error element
-//   error.classList.add('error-message')
-
-//   // creating text for our element
-//   const text = document.createTextNode('No results found. Sorry!')
-//   // appending the text to our element
-//   error.appendChild(text)
-//   // appending the error to our list element
-//   list.appendChild(error)
-// }
-
-// // creating and declaring a function called "setList"
-// // setList takes in a param of "results"
-// function setList(results) {
-//   clearList()
-//   for (const x of results) {
-//     const resultItem = document.createElement('a')
-//     resultItem.classList.add('result-item')
-//     const text = document.createTextNode(x)
-//     resultItem.appendChild(text)
-//     resultItem.href = x
-//     const listItem = document.createElement('li')
-//     listItem.appendChild(resultItem)
-//     list.appendChild(listItem)
-//   }
-
-//   if (results.length === 0) {
-//     noResults()
-//   }
-// }
+img.addEventListener('mousedown', function (event) {
+  event.preventDefault()
+})

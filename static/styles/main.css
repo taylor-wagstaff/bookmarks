@@ -1,7 +1,8 @@
 /* General Website Style rules */
 body {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: rgb(239, 239, 254);
+  font-family:'Courier New', Courier, monospace;
+  background-color: white;
+  margin:0;
 }
 
 /*   --main-bg-color: rgb(254, 221, 227) rgb(236, 236, 249); */
@@ -11,3 +12,245 @@ body {
   --main-text-color: #fff;
 }
 
+p{
+
+  margin: 0;
+}
+
+.header{
+  margin:0;
+  align-items: center;
+  text-align: center;
+  color: white;
+ 
+}
+
+.header:hover{
+  color:blue;
+  background-color:springgreen;
+  cursor: help;
+  min-height: none;
+  max-width: none;
+}
+
+.email{
+  margin:0;
+  align-items: center;
+  text-align:end;
+  color: white;
+ 
+}
+
+.email:hover{
+  color:black;
+  background-color:white;
+  cursor: help;
+  min-height: none;
+  max-width: none;
+}
+
+
+#clock {
+  cursor: help;
+  color: white
+}
+
+#clock:hover {
+  background-color:black;
+  color: white;
+}
+
+#my-image {
+  position: absolute;
+  pointer-events: none;
+ 
+}
+
+
+.spacer{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer:hover{
+  color: blue;
+  background-color:blue;
+  cursor:alias;
+}
+.spacer2{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer2:hover{
+  color:chocolate;
+  background-color:chocolate;
+  cursor:context-menu;
+}
+
+.spacer3{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer3:hover{
+  color:gold;
+  background-color:gold;
+  cursor:copy;
+}
+
+.spacer4{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer4:hover{
+  color:palegreen;
+  background-color:palegreen;
+  cursor:crosshair;
+}
+
+.spacer5{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer5:hover{
+  color:yellow;
+  background-color:yellow;
+  cursor:grab;
+}
+
+.spacer6{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer6:hover{
+  color:darkorange;
+  background-color:darkorange;
+  cursor:grabbing;
+}
+.spacer7{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer7:hover{
+  color:violet;
+  background-color:violet;
+  cursor:zoom-in;
+}
+.spacer8{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer8:hover{
+  color:darkkhaki;
+  background-color:darkkhaki;
+  cursor:wait;
+}
+
+
+.spacer9{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer9:hover{
+  color:limegreen;
+  background-color:limegreen;
+  cursor:progress;
+}
+
+.spacer10{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer10:hover{
+  color:coral;
+  background-color:coral;
+  cursor:move;
+}
+.spacer11{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer11:hover{
+  color:blanchedalmond;
+  background-color:blanchedalmond;
+  cursor:e-resize;
+}
+.spacer12{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer12:hover{
+  color:cornflowerblue;
+  background-color:cornflowerblue;
+  cursor:ew-resize;
+}
+.spacer12{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer12:hover{
+  color:fuchsia;
+  background-color:fuchsia;
+  cursor:no-drop;
+}
+.spacer13{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer13:hover{
+  color:aqua;
+  background-color:aqua;
+  cursor:progress;
+}
+.spacer14{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer14:hover{
+  color:darkorange;
+  background-color:darkorange;
+  cursor:zoom-out;
+}
+.spacer15{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer15:hover{
+  color:crimson;
+  background-color:crimson;
+  cursor:not-allowed;
+}
+.spacer16{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer16:hover{
+  color:deepskyblue;
+  background-color:deepskyblue;
+  cursor:ns-resize;
+}
+.spacer17{
+  margin:0;
+  min-height: 2rem;
+  color: white;
+}
+.spacer17:hover{
+  color:darkturquoise;
+  background-color:darkturquoise;
+  cursor:progress;
+}

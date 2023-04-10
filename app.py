@@ -2,15 +2,8 @@ from flask import Flask, render_template
 
 
 # . venv/bin/activate
+# flask run
 
-# bookmarks_url = []
-
-# for folder in chrome_bookmarks.folders:
-#     print(folder.name)
-#     print(folder.folders)
-
-# for url in chrome_bookmarks.urls:
-#     bookmarks_url.append(url.url)
 
 
 # sets up the website for python
